@@ -11,3 +11,6 @@ Fuck Should I Go to Eat) and drawing on Artforum's API.
 You provide your city, and our randomizer will choose a show for you to see.
 Don't like what we picked? Choose again. 
 Want to go see the show? Version 2 of WSISTW will enable location and maps. 
+
+June 2, 2019
+
