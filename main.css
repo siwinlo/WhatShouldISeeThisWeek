@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=AlegreyaAmatic+SCIQuattrocento');
-
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 	body {
-	font-family: Quattrocento, serif;
+	font-family: 'Roboto', sans-serif;
 	margin: 0 auto;
 	max-wdith: 600px;
 	background: #ffffff;
@@ -12,7 +11,7 @@
 	}
 
 	h1{
-	font-family: 'Alegreya', serif;
+	font-family: 'Roboto', sans-serif;
 	text-align: left;
 	font-size: 35px;
 	color: #444444;
