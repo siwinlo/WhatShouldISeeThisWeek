@@ -35,6 +35,10 @@ h1 {
   font-size: 30px;
   color: darkslategray;
 }
+h4 {
+  font-size: 35px;
+  font-style: italic;
+}
 h2 {
   font-size: 25px;
   color: darkslateblue;
@@ -44,4 +48,9 @@ img {
 }
 blockquote {
   width: 80%;
+}
+
+#loading {
+  width: 200px;
+  height: 200px;
 }

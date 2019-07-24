@@ -18,6 +18,7 @@ export class Parser extends React.Component {
     };
     this.fetchFirstPage = this.fetchFirstPage.bind(this);
     this.componentDidMount = this.componentDidMount.bind(this);
+    this.componentDidUpdate = this.componentDidUpdate.bind(this);
   }
 
   fetchFirstPage() {
@@ -40,15 +41,25 @@ export class Parser extends React.Component {
           hours: info.location.hours,
           startDate: info.showStart.substring(0, 10),
           endDate: info.showEnd.substring(0, 10),
+          dates: `${info.showStart.substring(
+            0,
+            10
+          )} to ${info.showEnd.substring(0, 10)}`,
           description: info.descriptionExtended,
           link: info.path,
-          imageSrc: "https://artforum.com" + images[0].pathLarge,
+          imageSrc: `https://artforum.com${images[0].pathLarge}`,
           imageCaption: images[0].captionFormatted
         });
       });
   }
   componentDidMount() {
     this.fetchFirstPage();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props !== prevProps) {
+      this.fetchFirstPage();
+    }
   }
   render() {
     return (
@@ -58,13 +69,13 @@ export class Parser extends React.Component {
         <h3> {this.state.venue} </h3>
         <p> {this.state.address} </p>
         <p> {this.state.hours} </p>
-        <p>
-          {this.state.startDate} -- {this.state.endDate}
-        </p>
+        <p>{this.state.dates}</p>
         <blockquote> {this.state.description} </blockquote>
         <br />
-        <img src={this.state.imageSrc} /> <br />
-        <p>{this.state.imageCaption}</p>
+        <img src={this.state.imageSrc} alt={this.state.imageCaption} /> <br />
+        <p>
+          <small>{this.state.imageCaption}</small>
+        </p>
       </div>
     );
   }
