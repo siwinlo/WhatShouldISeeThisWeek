@@ -30,7 +30,7 @@ export class Parser extends React.Component {
         return response.json();
       })
       .then(myJson => {
-        console.log(JSON.stringify(myJson));
+        //console.log(JSON.stringify(myJson));
         const info = myJson._embedded.location[0];
         const images = info.images;
         this.setState({

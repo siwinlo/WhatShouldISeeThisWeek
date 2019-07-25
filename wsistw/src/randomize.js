@@ -13,12 +13,14 @@ export class Randomize extends React.Component {
     this.fetchRandomPage = this.fetchRandomPage.bind(this);
     this.toggleAbout = this.toggleAbout.bind(this);
     this.about = (
-      <div>
-        {" "}
-        This is a project by <a href="https://siwinlo.github.io">Siwin Lo</a>.
-        Want to see some art, but daunted by having to choose a "cool" or
-        "smart" show? This app picks a random show for you to see, taking all
-        such pressures off you. Enjoy.{" "}
+      <div onClick={this.toggleAbout}>
+        <blockquote>
+          {" "}
+          This is a project by <a href="https://siwinlo.github.io">Siwin Lo</a>.
+          Want to see some art, but daunted by having to choose a "cool" or
+          "smart" show? This app picks a random show for you to see, taking all
+          such pressures off you. Enjoy.{" "}
+        </blockquote>
       </div>
     );
   }
@@ -41,6 +43,7 @@ export class Randomize extends React.Component {
         let url = this.constructRandomURL(myJson.pages);
         this.setState({ randomUrl: url });
       });
+    this.setState({ showAbout: false });
   }
 
   constructRandomURL(totalPages) {
@@ -73,16 +76,18 @@ export class Randomize extends React.Component {
 
     return (
       <>
-        {/* <header> */}
-        <h1>What should I see this week?</h1>
-        {/* <nav> */}
-        <button id="refreshDiv" onClick={this.fetchRandomPage}>
-          I want to see something different!
-        </button>
-        <button onClick={this.toggleAbout}>About this project</button>
-        {/* </nav> */}
-        {/* </header> */}
-        {content}
+        <div>
+          <h1 id="heading">What should I see this week?</h1>
+          <button id="refreshDiv" onClick={this.fetchRandomPage}>
+            Thank u, next!
+          </button>
+          <button onClick={this.toggleAbout}>About this project</button>
+        </div>
+        <div>
+          {" "}
+          <p />
+          {content}{" "}
+        </div>
       </>
     );
   }
