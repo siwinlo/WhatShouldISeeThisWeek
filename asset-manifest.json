@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/WhatShouldISeeThisWeek/static/css/main.b1e526f6.chunk.css",
-    "main.js": "/WhatShouldISeeThisWeek/static/js/main.1d12441f.chunk.js",
-    "main.js.map": "/WhatShouldISeeThisWeek/static/js/main.1d12441f.chunk.js.map",
+    "main.js": "/WhatShouldISeeThisWeek/static/js/main.d4985d2b.chunk.js",
+    "main.js.map": "/WhatShouldISeeThisWeek/static/js/main.d4985d2b.chunk.js.map",
     "runtime~main.js": "/WhatShouldISeeThisWeek/static/js/runtime~main.072c2517.js",
     "runtime~main.js.map": "/WhatShouldISeeThisWeek/static/js/runtime~main.072c2517.js.map",
     "static/js/2.0f58faaa.chunk.js": "/WhatShouldISeeThisWeek/static/js/2.0f58faaa.chunk.js",
     "static/js/2.0f58faaa.chunk.js.map": "/WhatShouldISeeThisWeek/static/js/2.0f58faaa.chunk.js.map",
     "index.html": "/WhatShouldISeeThisWeek/index.html",
-    "precache-manifest.8277b6617c23d41a0c4c84fcf5fc8e52.js": "/WhatShouldISeeThisWeek/precache-manifest.8277b6617c23d41a0c4c84fcf5fc8e52.js",
+    "precache-manifest.51255e128e18df7d91ad89c2b5ab59f0.js": "/WhatShouldISeeThisWeek/precache-manifest.51255e128e18df7d91ad89c2b5ab59f0.js",
     "service-worker.js": "/WhatShouldISeeThisWeek/service-worker.js",
     "static/css/main.b1e526f6.chunk.css.map": "/WhatShouldISeeThisWeek/static/css/main.b1e526f6.chunk.css.map"
   }
