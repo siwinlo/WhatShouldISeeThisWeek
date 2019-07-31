@@ -1,5 +1,6 @@
 import React from "react";
 import { Parser } from "./parser";
+import { About } from "./about";
 
 export class Randomize extends React.Component {
   constructor(props) {
@@ -8,21 +9,10 @@ export class Randomize extends React.Component {
       randomUrl: undefined,
       showAbout: false
     };
-    this.componentDidMount = this.componentDidMount.bind(this);
     this.constructRandomURL = this.constructRandomURL.bind(this);
     this.fetchRandomPage = this.fetchRandomPage.bind(this);
     this.toggleAbout = this.toggleAbout.bind(this);
-    this.about = (
-      <div onClick={this.toggleAbout}>
-        <blockquote>
-          {" "}
-          This is a project by <a href="https://siwinlo.github.io">Siwin Lo</a>.
-          Want to see some art, but daunted by having to choose a "cool" or
-          "smart" show? This app picks a random show for you to see, taking all
-          such pressures off you. Enjoy.{" "}
-        </blockquote>
-      </div>
-    );
+    this.about = <div onClick={this.toggleAbout}>{About()}</div>;
   }
 
   componentDidMount() {
@@ -76,14 +66,14 @@ export class Randomize extends React.Component {
 
     return (
       <>
-        <div>
+        <div id="header">
           <h1 id="heading">What should I see this week?</h1>
           <button id="refreshDiv" onClick={this.fetchRandomPage}>
             Thank u, next!
           </button>
           <button onClick={this.toggleAbout}>About this project</button>
         </div>
-        <div>
+        <div id="content">
           {" "}
           <p />
           {content}{" "}

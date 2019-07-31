@@ -4,21 +4,19 @@ export class Parser extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      artist: undefined,
-      title: undefined,
-      venue: undefined,
-      location: undefined,
-      startDate: undefined,
-      endDate: undefined,
-      description: undefined,
-      link: undefined,
-      imageSrc: undefined,
-      imageCaption: undefined,
+      artist: "",
+      title: "",
+      venue: "",
+      location: "",
+      startDate: "",
+      endDate: "",
+      description: "",
+      link: "",
+      imageSrc: "",
+      imageCaption: "",
       images: []
     };
     this.fetchFirstPage = this.fetchFirstPage.bind(this);
-    this.componentDidMount = this.componentDidMount.bind(this);
-    this.componentDidUpdate = this.componentDidUpdate.bind(this);
   }
 
   fetchFirstPage() {
