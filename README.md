@@ -12,5 +12,6 @@ You provide your city, and our randomizer will choose a show for you to see.
 Don't like what we picked? Choose again. 
 Want to go see the show? Version 2 of WSISTW will enable location and maps. 
 
-
-
+## To Do:
+- to fix: width jumps when images are resized and when toggling the "about" section
+- Async rather than chaining .then statements
