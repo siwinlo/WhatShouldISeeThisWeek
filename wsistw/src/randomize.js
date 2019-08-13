@@ -19,20 +19,16 @@ export class Randomize extends React.Component {
     this.fetchRandomPage();
   }
 
-  fetchRandomPage() {
-    fetch(
+  async fetchRandomPage() {
+    const response = await fetch(
       "https://qe8jl4jty7.execute-api.us-east-1.amazonaws.com/dev/?url=" +
         encodeURIComponent(
           "https://www.artforum.com/api/guide/entities-by-place-location/new-york?category=all&page=1&size=1&fetchAll=0"
         )
-    )
-      .then(function(response) {
-        return response.json();
-      })
-      .then(myJson => {
-        let url = this.constructRandomURL(myJson.pages);
-        this.setState({ randomUrl: url });
-      });
+    );
+    const myJson = await response.json();
+    const url = this.constructRandomURL(myJson.pages);
+    this.setState({ randomUrl: url });
     this.setState({ showAbout: false });
   }
 
@@ -65,7 +61,7 @@ export class Randomize extends React.Component {
     }
 
     return (
-      <>
+      <div id="app">
         <div id="header">
           <h1 id="heading">What should I see this week?</h1>
           <button id="refreshDiv" onClick={this.fetchRandomPage}>
@@ -78,7 +74,7 @@ export class Randomize extends React.Component {
           <p />
           {content}{" "}
         </div>
-      </>
+      </div>
     );
   }
 }
